@@ -10,15 +10,23 @@
 - 前端：原生HTML+JS
 
 ## 二、项目结构
-中老年智能药盒系统 /
-├── sql/init.sql # 数据库初始化脚本
-├── sql/fix_log_table.sql # 日志表修复脚本（可选）
-├── medicine-box/ # SpringBoot 后端项目（IDEA 直接打开）
-│   ├── src/main/java/com/medicine/ # Java源代码
-│   ├── src/main/resources/static/index.html # 监控网页
-│   └── src/main/resources/application.yml # 配置文件
-├── arduino/medicine_box/medicine_box.ino # 硬件源码
-└── README.md # 项目说明文档
+
+```plaintext
+中老年智能药盒系统/
+  ├── sql/                    # 数据库脚本目录
+  │     ├── init.sql          # 数据库初始化脚本
+  │     └── fix_log_table.sql # 日志表修复脚本（可选）
+  ├── medicine-box/           # SpringBoot 后端项目
+  │     └── src/...           # Java源代码和配置
+  ├── arduino/                # Arduino 硬件代码
+  │     └── medicine_box/
+  │           └── medicine_box.ino
+  ├── web/                    # 额外前端页面
+  │     ├── index.html
+  │     ├── login.html
+  │     └── register.html
+  └── README.md               # 项目说明文档
+```
 
 ## 三、部署运行步骤
 ### 1. 数据库
