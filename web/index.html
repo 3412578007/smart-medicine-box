@@ -460,24 +460,6 @@ async function apiRemind() {
     if (data.success) loadLog();
 }
 
-async function apiLost() {
-    if (role !== 'admin') return;
-    
-    let res = await fetch("http://localhost:8080/api/lost?role=" + role, { method: "POST" });
-    let data = await res.json();
-    showToast(data.msg || "操作完成", data.success);
-    if (data.success) loadLog();
-}
-
-async function apiBack() {
-    if (role !== 'admin') return;
-    
-    let res = await fetch("http://localhost:8080/api/back?role=" + role, { method: "POST" });
-    let data = await res.json();
-    showToast(data.msg || "操作完成", data.success);
-    if (data.success) loadLog();
-}
-
 async function apiClear() {
     if (role !== 'admin') return;
     
